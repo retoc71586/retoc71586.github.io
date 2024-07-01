@@ -53,3 +53,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+# _config.yml
+# To silence warning https://github.com/jekyll/minima/issues/709
+sass:
+  quiet_deps: true
