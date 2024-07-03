@@ -58,11 +58,11 @@
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: 2.4em;
     }
 
     h2 {
-      font-size: 1.9em;
+      font-size: 2.4em;
     }
 
     p,
@@ -116,8 +116,14 @@
       <div style="display: inline-block; vertical-align: top; padding-right: 1%; width: 58%">
         <h1 style="margin: 0;">Giacomo Manzoni</h1>
         <p style="font-size: 1.4em; text-align: justify;">
-            I am a Master student at ETH Zürich. My research interests revolve around various aspects of robot learning, with a particular focus on Imitation Learning for Manipulation. My goal is creating policies that can solve real life tasks, bringing robots in our daily life. To this end I intend to combine Imitation and Reinforcement Learning to create more adaptive and generalistic policies, but also work on higher level scene understanding and interaction.
+            Hello! My name is Giacomo and I am a Master student at ETH Zürich working on robot learning.  My goal is creating policies that can solve real life tasks, bringing robots in our daily life. 
         </p>
+        <p style="font-size: 1.4em; text-align: justify;">
+            I am interested in combining Imitation and Reinforcement Learning to create more adaptive and generalistic policies, but also on higher level scene understanding and interaction problems.
+        </p>
+        <!-- <p style="font-size: 1.4em; text-align: justify;">
+            I have obtained a bachelor's degree in Automation Engineering at Politecnico di Milano, Italy.
+        </p> -->
       </div>
       <div style="display: inline-block; vertical-align: middle; padding-left: 1%; width: 38%;">
         <img alt="portrait" src="static/presenting.png">
@@ -125,7 +131,7 @@
     </div>
 
     <p style="font-size: 1.4em; text-align: justify;">
-      I have worked for my Master's thesis on learning dexterous manipulation from humans at the <a href="https://srl.ethz.ch">Soft Robotics Lab</a> under the supervision of prof. <a href="https://robert.katzschmann.de">Robert Katzschmann</a> and <a href="https://www.elvisnava.com">Elvis Nava</a>.
+      I have worked for my Master's thesis on Learning Dexterous Manipulation from Humans at the <a href="https://srl.ethz.ch">Soft Robotics Lab</a> under the supervision of prof. <a href="https://robert.katzschmann.de">Robert Katzschmann</a> and <a href="https://www.elvisnava.com">Elvis Nava</a>.
       Previous to that I have worked on quadruped navigation and manipulation at the <a href="https://rsl.ethz.ch">Robotic Systems Lab</a>. I have also interned at <a href="https://leica-geosystems.com">Leica</a>, working on 3D expoloration with drones.
 
     </p>
@@ -141,24 +147,28 @@
       <a href="https://twitter.com/you">Twitter</a> -->
     </p>
     <h2>Projects</h2>
+    <span style="font-size: 1.3em"> A series of research projects that I have worked on.</span>
     <ul id="publist">
-    <li>
-      <div class="pub-fig">
+      <li>
+        <div class="pub-fig">
           <img alt="masters_thesis_thumbnail" src="static/teaser.gif">
         </div>
         <div class="pub-text">
-          <span style="font-weight: 600;">Master's thesis on learning dexterous manipulation from human videos.</span>
-          <br><span style="font-style: italic;">Soft Robotics Lab - 2024</span>
+          <span style="font-size: 1.3em">Learning dexterous manipulation from human videos</span>
+          <br><span style="font-style: italic;">
+            Soft Robotics Lab - Master's Thesis, 2024
+          </span><br>
+          <span style="font-size: 1em">
+            We present a novel Imitation Learning framework to learn dexterous manipulation tasks directly from human videos. No teleoperation on the real robot is required. This will allow to scale the learning process to the vast amounts of publicly available human manipulation videos on the web, creating a foundation model for robot manipulation.
+         </span>
         </div>
       </li>
       <li>
-      <li>
         <div class="pub-fig">
-          <img alt="blktofly-thumbnail"
-            src="static/blk_to_fly.gif">
+          <img alt="blktofly-thumbnail" src="static/blk_to_fly.gif">
         </div>
         <div class="pub-text">
-          <span style="font-weight: 600;">3D unknown space exploration algorithms for autonomous drone.</span>
+          <span style="font-size: 1.3em">3D exploration algorithms for autonomous drone</span>
           <br><span style="font-style: italic;">Internal product, Leica Geosystems. 2023</span>
           <!-- <div>
             <a href="https://omron-sinicx.github.io/tactile-dipole-monent/">Project Page</a>
@@ -174,8 +184,12 @@
           <img alt="semester_project-thumbnail" src="static/semester_project.gif">
         </div>
         <div class="pub-text">
-          <span style="font-weight: 600;">Motion Primitives based local planner for quadruped robots.</span>
-          <br><span style="font-style: italic;">Robotics Systems Lab - Semester Project, 2023</span>
+          <span style="font-size: 1.3em">Motion Primitives based local planner for quadruped robots</span>
+          <br><span style="font-style: italic;">Robotics Systems Lab - Semester Project, 2023</span><br>
+          <span style="font-size: 1em">
+            We present a planning architecture based on two main components: a precomputed motion library and an online decision making planner.
+            This results in incredibly fast and efficient path planning, while also been able to fully exploit the motion capabilities of the legged platform.
+         </span>
           <!-- <div>
             <a href="https:">Project Page</a>
             /
@@ -187,14 +201,15 @@
       </li>
     </ul>
 
-    <h2>Robots I have worked with</h2>
+    <h2>Robots</h2>
+    <span style="font-size: 1.3em">Main robotics paltforms I have used in my various projects.</span>
     <ul id="publist">
       <li>
         <div class="pub-fig">
           <img alt="faive-franka-thumbnail" src="static/faive_franka.png">
         </div>
         <div class="pub-text" style="text-align: justify;">
-          <span style="font-weight: 600; ">Franka Panda robot arm + Faive Manipulator</span><br>
+          <span style="font-size: 1.3em">Franka Panda robot arm + Faive manipulator</span><br>
           This ETH Zürich Soft Robotics Lab's manipulator robot consists of a Franka Emika Panda robotic arm, with the in-house developed  <a href="https://arxiv.org/pdf/2308.02453 ">Faive hand</a> mounted as end-effector. I did not build this robot myself (even though I disassembled and assembled a few times). Instead, it is the culmination of several years
           of hardware development in the lab, whereas developing the software and controls for it is the main focus of
           my thesis.
@@ -206,7 +221,7 @@
           <img alt="blktofly-thumbnail" src="static/BLK2FLY_AboveInFlight1.jpg">
         </div>
         <div class="pub-text" style="text-align: justify;">
-          <span style="font-weight: 600; ">BLK To Fly Drone</span><br>
+          <span style="font-size: 1.3em">BLK To Fly autonomous drone</span><br>
           This drone is an incredible platform, completely in house developed by the Leica Geosystems team with a custom Lidar laser scanner in front. It's crazy how complex such a compact system can be, both in hardware and software.
           <div>
             <a href="https://www.youtube.com/watch?v=9zP9O010usk">Video</a>
@@ -219,7 +234,7 @@
           <img alt="anymal-thumbnail" src="static/anymal.jpg">
         </div>
         <div class="pub-text" style="text-align: justify;">
-          <span style="font-weight: 600;">ANYmal quadruped</span><br>
+          <span style="font-size: 1.3em">ANYmal quadruped</span><br>
           For my semester project on quadruped navigation I have used the main development platform at Robotics Systems Lab. I have only worked in simulation (Gazebo) but I had the cance to see the real robot in many occasions, also outside the lab.
           <div>
             <a href="https://www.anybotics.com/robotics/anymal/r">Website</a>
