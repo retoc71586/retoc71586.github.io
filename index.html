@@ -1,260 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giacomo Manzoni</title>
+    <meta name="description" content="Giacomo Manzoni's webpage." />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Giacomo Manzoni</title>
-  <meta name="description" content="Giacomo Manzoni's webpage.">
-
-  <meta property="og:title" content="Giacomo Manzoni">
-  <meta property="og:description" content="Giacomo Manzoni's webpage.">
-  <!-- <meta property="og:image" content="static/anymal_picture.jpg"> -->
-  <meta property="og:type" content="website">
-  <!-- <meta name="twitter:card" content="static/anymal_picture.jpg"> -->
-  <!-- <meta property="og:url" content="https://yunifuchioka.github.io/">
+    <meta property="og:title" content="Giacomo Manzoni" />
+    <meta property="og:description" content="Giacomo Manzoni's webpage." />
+    <!-- <meta property="og:image" content="static/anymal_picture.jpg"> -->
+    <meta property="og:type" content="website" />
+    <!-- <meta name="twitter:card" content="static/anymal_picture.jpg"> -->
+    <!-- <meta property="og:url" content="https://yunifuchioka.github.io/">
   <link rel="canonical" href="https://yunifuchioka.github.io/"> -->
 
+    <!-- Website template taken from https://github.com/yunifuchioka/yunifuchioka.github.io-->
+    <!-- Website template originally taken from https://github.com/ZhaomingXie/ZhaomingXie.github.io -->
+    <!-- Website template originally written by Hung Yu "Ben" Ling: https://hungyuling.com/ -->
 
-  <!-- Website template taken from https://github.com/yunifuchioka/yunifuchioka.github.io-->
-  <!-- Website template originally taken from https://github.com/ZhaomingXie/ZhaomingXie.github.io -->
-  <!-- Website template originally written by Hung Yu "Ben" Ling: https://hungyuling.com/ -->
+    <style>
+      :root {
+        --accent-color: rgb(6, 69, 173);
+        --fg-color: rgb(32, 33, 34);
+        --bg-color: #fff;
+        --max-content-width: 800px;
+      }
 
-  <style>
-    :root {
-      --accent-color: rgb(6, 69, 173);
-      --fg-color: rgb(32, 33, 34);
-      --bg-color: #fff;
-      --max-content-width: 800px;
-    }
+      body {
+        font-family: sans-serif;
+        font-size: calc(12px + 0.05vw);
+        color: var(--fg-color);
+        background-color: var(--bg-color);
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+      }
 
-    body {
-      font-family: sans-serif;
-      font-size: calc(12px + 0.05vw);
-      color: var(--fg-color);
-      background-color: var(--bg-color);
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-    }
+      main {
+        /* Use a normal flow layout instead of absolute positioning */
+        position: relative;
+        margin: 0 auto;
+        width: 90vw;
+        max-width: var(--max-content-width);
+        padding: 2rem 0;
+        background-color: var(--bg-color);
+        min-height: 90vh;
+      }
 
-    main {
-      /* Use a normal flow layout instead of absolute positioning */
-      position: relative;
-      margin: 0 auto;
-      width: 90vw;
-      max-width: var(--max-content-width);
-      padding: 2rem 0;
-      background-color: var(--bg-color);
-      min-height: 90vh;
-    }
+      h1,
+      h2 {
+        font-weight: 600;
+        margin-top: 1.3em;
+      }
 
-    h1,
-    h2 {
-      font-weight: 600;
-      margin-top: 1.3em;
-    }
+      h1 {
+        font-size: 2.4em;
+      }
 
-    h1 {
-      font-size: 2.4em;
-    }
+      h2 {
+        font-size: 1.6em;
+      }
 
-    h2 {
-      font-size: 1.6em;
-    }
+      p,
+      li {
+        font-size: 1.3em;
+        line-height: 1.6;
+      }
 
-    p,
-    li {
-      font-size: 1.3em;
-      line-height: 1.6;
-    }
+      ul {
+        padding-left: 2em;
+      }
 
-    ul {
-      padding-left: 2em;
-    }
+      /* reusable list style for project/robot lists */
+      .pub-list {
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+      }
 
-    /* reusable list style for project/robot lists */
-    .pub-list {
-      padding-left: 0;
-      list-style: none;
-      margin: 0;
-    }
+      .pub-list > * {
+        margin-bottom: 1.2em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
 
-    .pub-list > * {
-      margin-bottom: 1.2em;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+      a {
+        text-decoration: underline;
+        color: var(--fg-color);
+      }
 
-    a {
-      text-decoration: underline;
-      color: var(--fg-color);
-    }
+      img {
+        width: 100%;
+        height: auto;
+      }
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+      .pub-fig {
+        flex: 0.6 1 40%;
+        min-width: 120px;
+        max-width: 250px;
+        margin-right: 2%;
+      }
 
-    .pub-fig {
-      flex: 0.6 1 40%;
-      min-width: 120px;
-      max-width: 250px;
-      margin-right: 2%;
-    }
+      .pub-text {
+        flex: 1 1 50%;
+      }
+    </style>
+  </head>
 
-    .pub-text {
-      flex: 1 1 50%;
-    }
-  </style>
+  <body>
+    <main>
+      <div>
+        <h1 style="margin: 0">Giacomo Manzoni</h1>
+        <div
+          style="
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 1%;
+            width: 58%;
+          "
+        >
+          <p style="font-size: 1.4em; text-align: justify">
+            Hello! My name is Giacomo, and I am a Robotics Engineer at
+            <a
+              href="https://robotics.hexagon.com"
+              target="_blank"
+              rel="noopener"
+              >Hexagon Robotics</a
+            >
+            working on <strong>Robot Learning for Manipulation</strong>.
+          </p>
+          <p style="font-size: 1.4em; text-align: justify">
+            I am interested in applying generative models in Imitation and
+            Reinforcement Learning to create adaptive and precise policies.
+          </p>
+          <p style="font-size: 1.4em; text-align: justify">
+            Specifically I contribute to the development of the full IL stack
+            for
+            <a
+              href="https://robotics.hexagon.com/product/"
+              target="_blank"
+              rel="noopener"
+              >AEON</a
+            >
+            including teleoperation, data collection, model development,
+            training and deployment.
+          </p>
+          <p style="font-size: 1.4em; text-align: justify">
+            Additionally, I am interested in scene understanding and interaction
+            problems.
+          </p>
+        </div>
+        <div
+          style="
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 1%;
+            width: 38%;
+          "
+        >
+          <img alt="Giacomo Manzoni presenting" src="static/presenting.png" />
+        </div>
+      </div>
 
-</head>
-
-<body>
-  <main>
-    <div>
-      <h1 style="margin: 0;">Giacomo Manzoni</h1>
-    <div style="display: inline-block; vertical-align: top; padding-right: 1%; width: 58%">
-    <p style="font-size: 1.4em; text-align: justify;">
-      Hello! My name is Giacomo, and I am a Robotics Engineer at <a href="https://robotics.hexagon.com" target="_blank" rel="noopener">Hexagon Robotics</a> working on <strong>Robot Learning for Manipulation</strong>.
-    </p>
-    <p style="font-size: 1.4em; text-align: justify;">
-      I am interested in applying generative models in Imitation and Reinforcement Learning to create more adaptive and precise policies.
-    </p>
-    <p style="font-size: 1.4em; text-align: justify;">
-      Specifically I contribute to the development of the full IL stack for <a href="https://robotics.hexagon.com/product/" target="_blank" rel="noopener">AEON</a> including teleoperation, data collection, model development, training and deployment.
-    </p>
-    <p style="font-size: 1.4em; text-align: justify;">
-      Additionally, I am interested in scene understanding and interaction problems.
-    </p>
-    </div>
-    <div style="display: inline-block; vertical-align: middle; padding-left: 1%; width: 38%;">
-    <img alt="Giacomo Manzoni presenting" src="static/presenting.png">
-    </div>
-    </div>
-
-    <p style="font-size: 1.4em; text-align: justify;">
-      Previously, for my Master's thesis I have worked on Learning Dexterous Manipulation from Humans at the <a href="https://srl.ethz.ch" target="_blank" rel="noopener">Soft Robotics Lab</a> under the supervision of Prof. <a href="https://robert.katzschmann.de" target="_blank" rel="noopener">Robert Katzschmann</a> and <a href="https://www.elvisnava.com" target="_blank" rel="noopener">Elvis Nava</a>.
-      Prior to that, I worked on quadruped navigation at the <a href="https://rsl.ethz.ch" target="_blank" rel="noopener">Robotic Systems Lab</a>. I have also interned at <a href="https://leica-geosystems.com" target="_blank" rel="noopener">Leica</a>, working on 3D exploration with drones.
-    </p>
-    <p>
-      <!-- <a href="static/cv.pdf">CV</a>
+      <p style="font-size: 1.4em; text-align: justify">
+        Previously I have worked on Learning Dexterous Manipulation from Humans,
+        for my Master's thesis, at the
+        <a href="https://srl.ethz.ch" target="_blank" rel="noopener"
+          >Soft Robotics Lab</a
+        >
+        under the supervision of Prof.
+        <a href="https://robert.katzschmann.de" target="_blank" rel="noopener"
+          >Robert Katzschmann</a
+        >
+        and
+        <a href="https://www.elvisnava.com" target="_blank" rel="noopener"
+          >Elvis Nava</a
+        >. Prior to that I worked on quadruped navigation at the
+        <a href="https://rsl.ethz.ch" target="_blank" rel="noopener"
+          >Robotic Systems Lab</a
+        >. I have also interned at
+        <a href="https://leica-geosystems.com" target="_blank" rel="noopener"
+          >Leica</a
+        >, working on 3D exploration with drones.
+      </p>
+      <p>
+        <!-- <a href="static/cv.pdf">CV</a>
       / -->
-      <!-- <a href="mailto:theesenutsa@gmail.com">Email</a>
+        <!-- <a href="mailto:theesenutsa@gmail.com">Email</a>
       / -->
-  <a href="https://www.linkedin.com/in/manzonigiacomo/" target="_blank" rel="noopener">LinkedIn</a>
-  /
-  <a href="https://github.com/retoc71586" target="_blank" rel="noopener">GitHub</a>
-    </p>
+        <a
+          href="https://www.linkedin.com/in/manzonigiacomo/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+        /
+        <a href="https://github.com/retoc71586" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+      </p>
 
-
-    <h2>Projects</h2>
-    <span style="font-size: 1.3em"> A series of research projects that I have worked on.</span>
-  <ul class="pub-list">
-      <li>
-        <div class="pub-fig">
-          <img alt="Dexterous manipulation teaser" src="static/teaser.gif">
-        </div>
-        <div class="pub-text">
-          <span style="font-size: 1.3em">Learning dexterous manipulation from human videos</span>
-          <br><span style="font-style: italic;">
-            Soft Robotics Lab - Master's Thesis, 2024
-          </span><br>
-          <span style="font-size: 1.0em">
-            We present a novel Imitation Learning framework to learn dexterous manipulation tasks directly from human videos. No teleoperation on the real robot is required. This will allow to scale the learning process to the vast amounts of publicly available human manipulation videos on the web, creating a foundation model for robot manipulation.
-         </span>
-        </div>
-      </li>
-      <li>
-        <div class="pub-fig">
-          <img alt="3D exploration demo" src="static/blk_to_fly.gif">
-        </div>
-        <div class="pub-text">
-          <span style="font-size: 1.3em">3D exploration algorithms for autonomous drone</span>
-          <br><span style="font-style: italic;">Internal product, Leica Geosystems. 2023</span>
-          <!-- <div>
+      <h2>Projects</h2>
+      <span style="font-size: 1.3em">
+        A series of research projects that I have worked on</span
+      >
+      <ul class="pub-list">
+        <li>
+          <div class="pub-fig">
+            <img alt="Dexterous manipulation teaser" src="static/teaser.gif" />
+          </div>
+          <div class="pub-text">
+            <span style="font-size: 1.3em"
+              >Learning dexterous manipulation from human videos</span
+            >
+            <br /><span style="font-style: italic">
+              Soft Robotics Lab - Master's Thesis, 2024 </span
+            ><br />
+            <span style="font-size: 1em">
+              We present a novel Imitation Learning framework to learn dexterous
+              manipulation tasks directly from human videos. No teleoperation on
+              the real robot is required. This will allow to scale the learning
+              process to the vast amounts of publicly available human
+              manipulation videos on the web, creating a foundation model for
+              robot manipulation.
+            </span>
+          </div>
+        </li>
+        <li>
+          <div class="pub-fig">
+            <img alt="3D exploration demo" src="static/blk_to_fly.gif" />
+          </div>
+          <div class="pub-text">
+            <span style="font-size: 1.3em"
+              >3D exploration algorithms for autonomous drone</span
+            >
+            <br /><span style="font-style: italic"
+              >Internal product, Leica Geosystems. 2023</span
+            >
+            <!-- <div>
             <a href="https://omron-sinicx.github.io/tactile-dipole-monent/">Project Page</a>
             /
             <a href="https://arxiv.org/abs/2404.15626">Paper</a>
             /
             <a href="https://youtu.be/wkrL3U5UrJY">Video</a>
           </div> -->
-        </div>
-      </li>
-      <li>
-        <div class="pub-fig">
-          <img alt="semester project demo" src="static/semester_project.gif">
-        </div>
-        <div class="pub-text">
-          <span style="font-size: 1.3em">Motion Primitives based local planner for quadruped robots</span>
-          <br><span style="font-style: italic;">Robotics Systems Lab - Semester Project, 2023</span><br>
-          <span style="font-size: 1.0em">
-            We present a planning architecture based on two main components: a precomputed motion library and an online decision making planner.
-            This results in incredibly fast and efficient path planning, while also been able to fully exploit the motion capabilities of the legged platform.
-         </span>
-          <!-- <div>
+          </div>
+        </li>
+        <li>
+          <div class="pub-fig">
+            <img
+              alt="semester project demo"
+              src="static/semester_project.gif"
+            />
+          </div>
+          <div class="pub-text">
+            <span style="font-size: 1.3em"
+              >Motion Primitives based local planner for quadruped robots</span
+            >
+            <br /><span style="font-style: italic"
+              >Robotics Systems Lab - Semester Project, 2023</span
+            ><br />
+            <span style="font-size: 1em">
+              We present a planning architecture based on two main components: a
+              precomputed motion library and an online decision making planner.
+              This results in incredibly fast and efficient path planning, while
+              also been able to fully exploit the motion capabilities of the
+              legged platform.
+            </span>
+            <!-- <div>
             <a href="https:">Project Page</a>
             /
             <a href="https://arxiv.org/>Paper</a>
             /
             <a href="https://youtu.be/">Video</a>
+          </div> -->
           </div>
-        </div> -->
-      </li>
-    </ul>
+        </li>
+      </ul>
 
-
-
-  <h2>Robots</h2>
-  <span style="font-size: 1.3em">Main robotics platforms I have learned with, and used in my various projects.
-
-  </span>
-  <ul class="pub-list">
-      <li>
-        <div class="pub-fig">
-          <img alt="AEON humanoid robot" src="static/AEON teleop.jpeg">
-        </div>
-        <div class="pub-text" style="text-align: justify;">
-          <span style="font-size: 1.3em">AEON</span><br>
-          Hexagon Robotics' first humanoid robot. Engineered to tackle complex industrial tasks. My main scope is developing the full stack for learning-based manipulation, which implies close interaction with the arms and end effector hardware.
-        </div>
-      </li>
-      <li>
-        <div class="pub-fig">
-          <img alt="Franka Panda with Faive hand" src="static/faive_franka.png">
-        </div>
-        <div class="pub-text" style="text-align: justify;">
-          <span style="font-size: 1.3em">Franka Panda robot arm + Faive manipulator</span><br>
-          This ETH Zürich Soft Robotics Lab's manipulator robot consists of a Franka Emika Panda robotic arm, with the in-house developed <a href="https://arxiv.org/pdf/2308.02453" target="_blank" rel="noopener">Faive hand</a> mounted as end-effector. I did not build this robot myself (even though I disassembled and assembled it a few times). Instead, it is the culmination of several years
-          of hardware development in the lab, whereas developing the software and controls for it is the main focus of my thesis.
-        </div>
-      </li>
-      <li>
-        <div class="pub-fig">
-          <img alt="BLK2FLY autonomous drone" src="static/BLK2FLY_AboveInFlight1.jpg">
-        </div>
-        <div class="pub-text" style="text-align: justify;">
-          <span style="font-size: 1.3em">BLK To Fly autonomous drone</span><br>
-          This drone is an incredible platform, completely in-house developed by the Leica Geosystems team with a custom LiDAR scanner in front. It's impressive how complex such a compact system can be, both in hardware and software.
-          <div>
-            <a href="https://www.youtube.com/watch?v=9zP9O010usk" target="_blank" rel="noopener">Video</a>
+      <h2>Robots</h2>
+      <span style="font-size: 1.3em"
+        >Main robotics platforms I have learned with, and used in my various
+        projects.
+      </span>
+      <ul class="pub-list">
+        <li>
+          <div class="pub-fig">
+            <img alt="AEON humanoid robot" src="static/AEON teleop.jpeg" />
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="pub-fig">
-          <img alt="ANYmal quadruped" src="static/anymal.jpg">
-        </div>
-        <div class="pub-text" style="text-align: justify;">
-          <span style="font-size: 1.3em">ANYmal quadruped</span><br>
-          For my semester project on quadruped navigation I used the main development platform at Robotics Systems Lab. I worked in simulation (Gazebo) but I had the chance to see the real robot on several occasions, also outside the lab.
-          <div>
-            <a href="https://www.anybotics.com/robotics/anymal/r">Website</a>
+          <div class="pub-text" style="text-align: justify">
+            <span style="font-size: 1.3em">AEON</span><br />
+            Hexagon Robotics' first humanoid robot. Engineered to tackle complex
+            industrial tasks. My main scope is developing the full stack for
+            learning-based manipulation, which implies close interaction with
+            the arms and end effector hardware.
           </div>
-        </div>
-      </li>
-    </ul>
-  </main>
-</body>
-
+        </li>
+        <li>
+          <div class="pub-fig">
+            <img
+              alt="Franka Panda with Faive hand"
+              src="static/faive_franka.png"
+            />
+          </div>
+          <div class="pub-text" style="text-align: justify">
+            <span style="font-size: 1.3em"
+              >Franka Panda robot arm + Faive manipulator</span
+            ><br />
+            This ETH Zürich Soft Robotics Lab's manipulator robot consists of a
+            Franka Emika Panda robotic arm, with the in-house developed
+            <a
+              href="https://arxiv.org/pdf/2308.02453"
+              target="_blank"
+              rel="noopener"
+              >Faive hand</a
+            >
+            mounted as end-effector. I did not build this robot myself (even
+            though I disassembled and assembled it a few times). Instead, it is
+            the culmination of several years of hardware development in the lab,
+            whereas developing the software and controls for it is the main
+            focus of my thesis.
+          </div>
+        </li>
+        <li>
+          <div class="pub-fig">
+            <img
+              alt="BLK2FLY autonomous drone"
+              src="static/BLK2FLY_AboveInFlight1.jpg"
+            />
+          </div>
+          <div class="pub-text" style="text-align: justify">
+            <span style="font-size: 1.3em">BLK To Fly autonomous drone</span
+            ><br />
+            This drone is an incredible platform, completely in-house developed
+            by the Leica Geosystems team with a custom LiDAR scanner in front.
+            It's impressive how complex such a compact system can be, both in
+            hardware and software.
+            <div>
+              <a
+                href="https://www.youtube.com/watch?v=9zP9O010usk"
+                target="_blank"
+                rel="noopener"
+                >Video</a
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="pub-fig">
+            <img alt="ANYmal quadruped" src="static/anymal.jpg" />
+          </div>
+          <div class="pub-text" style="text-align: justify">
+            <span style="font-size: 1.3em">ANYmal quadruped</span><br />
+            For my semester project on quadruped navigation I used the main
+            development platform at Robotics Systems Lab. I worked in simulation
+            (Gazebo) but I had the chance to see the real robot on several
+            occasions, also outside the lab.
+            <div>
+              <a href="https://www.anybotics.com/robotics/anymal/r">Website</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
