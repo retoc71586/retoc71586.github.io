@@ -74,7 +74,7 @@
       .pub-list {
         padding-left: 0;
         list-style: none;
-        margin: 0;
+        margin: 1.2em 0 0 0;
       }
 
       .pub-list > * {
@@ -104,6 +104,80 @@
       .pub-text {
         flex: 1 1 50%;
       }
+
+      /* Notes section: compact, always-visible, scrollable */
+      .notes-box {
+        max-height: 6.5em; /* ~2 entries visible; rest scroll */
+        overflow-y: auto;
+      }
+
+      .notes-item {
+        display: block;
+        padding: 0.55em 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+        color: var(--fg-color);
+        font-size: 1.2em;
+        line-height: 1.4;
+      }
+
+      .notes-item:last-child {
+        border-bottom: none;
+      }
+
+      .notes-item:hover .notes-title {
+        text-decoration: underline;
+      }
+
+      .notes-date {
+        color: rgb(110, 112, 115);
+        font-style: italic;
+        margin-right: 0.6em;
+        white-space: nowrap;
+      }
+
+      /* Intro: two-column on desktop, stacked on narrow screens */
+      .intro-text {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 1%;
+        width: 58%;
+      }
+
+      .intro-photo {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 1%;
+        width: 38%;
+      }
+
+      .intro-text > p {
+        font-size: 1.4em;
+      }
+
+      @media (max-width: 640px) {
+        .intro-text,
+        .intro-photo {
+          display: block;
+          width: 100%;
+          padding: 0;
+        }
+        .intro-photo {
+          margin-top: 1em;
+          max-width: 320px;
+        }
+
+        /* Project/Robot list items stack image above text on phones */
+        .pub-list > * {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .pub-fig {
+          max-width: 100%;
+          margin-right: 0;
+          margin-bottom: 0.8em;
+        }
+      }
     </style>
   </head>
 
@@ -111,15 +185,8 @@
     <main>
       <div>
         <h1 style="margin: 0">Giacomo Manzoni</h1>
-        <div
-          style="
-            display: inline-block;
-            vertical-align: top;
-            padding-right: 1%;
-            width: 58%;
-          "
-        >
-          <p style="font-size: 1.4em">
+        <div class="intro-text">
+          <p>
             Hello! My name is Giacomo, and I am a Robotics Engineer at
             <a
               href="https://robotics.hexagon.com"
@@ -129,11 +196,11 @@
             >
             working on <strong>Robot Learning for Manipulation</strong>.
           </p>
-          <p style="font-size: 1.4em">
+          <p>
             I am interested in applying generative models in Imitation and
             Reinforcement Learning to create adaptive and precise policies.
           </p>
-          <p style="font-size: 1.4em">
+          <p>
             Specifically I contribute to the development of the full IL stack
             for
             <a
@@ -145,19 +212,12 @@
             including teleoperation, data collection, model development,
             training and deployment.
           </p>
-          <p style="font-size: 1.4em">
+          <p>
             Additionally, I am interested in scene understanding and interaction
             problems.
           </p>
         </div>
-        <div
-          style="
-            display: inline-block;
-            vertical-align: middle;
-            padding-left: 1%;
-            width: 38%;
-          "
-        >
+        <div class="intro-photo">
           <img alt="Giacomo Manzoni presenting" src="static/presenting.png" />
         </div>
       </div>
@@ -200,9 +260,22 @@
         >
       </p>
 
+      <h2>Notes</h2>
+      <div class="notes-box">
+        <a class="notes-item" href="notes/zurichai-2025.html">
+          <span class="notes-date">2025-12</span>
+          <span class="notes-title">A gentle introduction to Imitation Learning for Dexterous Manipulation @ZurichAI
+            Meetup</span>
+        </a>
+        <a class="notes-item" href="notes/hexagonlive-2025.html">
+          <span class="notes-date">2025-06</span>
+          <span class="notes-title">First live humanoid manipulation demo ever. HxGN Live 2025</span>
+        </a>
+      </div>
+
       <h2>Projects</h2>
       <span style="font-size: 1.3em">
-        A series of research projects that I have worked on</span
+        A series of research projects that I have worked on.</span
       >
       <ul class="pub-list">
         <li>
