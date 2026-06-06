@@ -9,12 +9,24 @@
       content="Notes from presenting AEON live on stage at HexagonLIVE 2025."
     />
 
-    <!-- Umami Analytics: after deploying at umami.is, replace YOUR_UMAMI_URL and YOUR_WEBSITE_ID -->
     <script
       defer
       src="https://my-umami-analytics-opal.vercel.app/script.js"
       data-website-id="dd7ed32c-5e8b-4223-b422-aab0c9574aff"
     ></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        fetch("https://telegram-website-notifier-bot.vercel.app/api/notify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            page: location.pathname,
+            referrer: document.referrer || null,
+          }),
+        }).catch(function () {});
+      });
+    </script>
 
     <style>
       :root {
